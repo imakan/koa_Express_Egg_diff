@@ -28,7 +28,9 @@
 
 ## Koa 与 Express 以及 Connect 的区别
 
-![koa](https://user-gold-cdn.xitu.io/2017/8/7/eaa60fcf179c834c9f010151a5b360cf?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+> Koa洋葱圈
+
+>> ![koa](https://user-gold-cdn.xitu.io/2017/8/7/eaa60fcf179c834c9f010151a5b360cf?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 1、基于promise的控制流程,洋葱圈比Express强大
 
