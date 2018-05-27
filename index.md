@@ -6,6 +6,8 @@
 
 > koa 是express框架原班人马基于es6新特性重新开发的敏捷开发框架
 
+> egg 底层基于 Koa 1.x，异步解决方案基于 co 封装的 generator function
+
   **为什么koa不定义为express4.0**
 
   Koa与人们所知的Express有很大的不同，设计基本上不同，所以从Express3.0到4.0迁移，需要重写整个应用
