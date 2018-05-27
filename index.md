@@ -8,17 +8,14 @@
 
 > egg 底层基于 Koa 1.x，异步解决方案基于 co 封装的 generator function
 
-  **为什么koa不定义为express4.0**
 
-  Koa与人们所知的Express有很大的不同，设计基本上不同，所以从Express3.0到4.0迁移，需要重写整个应用
+### 服务端开发框架，主要是对HTTP Request 以及 HTTP Response两个对象的封装和处理，应用的生命周期维护以及视图的处理等
 
-服务端开发框架，主要是对HTTP Request 以及 HTTP Response两个对象的封装和处理，应用的生命周期维护以及视图的处理等
+* express 主要基于Connect 中间件框架，功能丰富，随取随用，``框架自身封装了大量便利的功能``，路由，视图处理.
 
-1、express 主要基于Connect 中间件框架，功能丰富，随取随用，``框架自身封装了大量便利的功能``，路由，视图处理.
+* koa主要基于co中间件框架，框架自身没有继承太多功能，所以要require去解决，使用promises和async functions来清除callback hell的应用程序并简化错误处理。它暴露自己ctx.request和ctx.response对象，而不是节点req和res对象，only about 2K lines of code。（虽然express 也有co-express，取决于你喜欢怎么写）
 
-2、koa主要基于co中间件框架，框架自身没有继承太多功能，所以要require去解决，使用promises和async functions来清除callback hell的应用程序并简化错误处理。它暴露自己ctx.request和ctx.response对象，而不是节点req和res对象，only about 2K lines of code。（虽然express 也有co-express，取决于你喜欢怎么写）
-
-3、connect与koa中间件模式区别的核心就在于next的实现
+* connect与koa中间件模式区别的核心就在于next的实现
 
 | Feature           | Koa | Express | Connect |
 |------------------:|-----|---------|---------|
