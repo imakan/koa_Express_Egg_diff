@@ -9,13 +9,13 @@
 
   **为什么koa不定义为express4.0**
 
-  Koa与人们所知的Express有很大的不同，设计基本上不同，所以从Express3.0到4.0迁移，需要重写整个应用
+  Koa与人们所知的Express有很大的不同，设计基本上不同，所以从Express3.0到4.0迁移，需要重写整个应用
 
 服务端开发框架，主要是对HTTP Request 以及 HTTP Response两个对象的封装和处理，应用的生命周期维护以及视图的处理等
 
 1、express 主要基于Connect 中间件框架，功能丰富，随取随用，``框架自身封装了大量便利的功能``，路由，视图处理.
 
-2、koa主要基于co中间件框架，框架自身没有继承太多功能，所以要require去解决，使用promises和async functions来清除callback hell的应用程序并简化错误处理。它暴露自己ctx.request和ctx.response对象，而不是节点req和res对象，only about 2K lines of code。（虽然express 也有co-express，取决于你喜欢怎么写）
+2、koa主要基于co中间件框架，框架自身没有继承太多功能，所以要require去解决，使用promises和async functions来清除callback hell的应用程序并简化错误处理。它暴露自己ctx.request和ctx.response对象，而不是节点req和res对象，only about 2K lines of code。（虽然express 也有co-express，取决于你喜欢怎么写）
 
 3、connect与koa中间件模式区别的核心就在于next的实现
 
@@ -67,18 +67,18 @@ Azure D-Series Ubuntu VM | Framework | req/s | |–|–| | Node| 7894.918 | | Ex
 
 ### 结论
 
-在性能方面，Koa以一个微弱的优势险胜Express，如果有显著的性能要求，应考虑Koa的优势
+在性能方面，Koa以一个微弱的优势险胜Express，如果有显著的性能要求，应考虑Koa的优势
 
 
 ##  总结
 
 * 如果是一个纯净的应用，可读性比较好，比较清晰的逻辑 适合用koa
-* 如果现有项目已经是Express的应用程序,应该坚持Express，Koa与Express并不能很容易的合作，Koa的Context对象与基本的Node req和 res对象不兼容
+* 如果现有项目已经是Express的应用程序,应该坚持Express，Koa与Express并不能很容易的合作，Koa的Context对象与基本的Node req和 res对象不兼容
 * 性能上Koa 比 Express 有轻微的优势
 * 如果你喜欢diy，很潮，可以考虑koa，它有足够的扩展和中间件，而且自己写很简单
 * 如果你想简单点，找一个框架啥都有，那么先express
 
-## koa 与 egg
+## koa 与 egg
 
 Egg 1.x 发布时，Node.js 的 LTS 版本尚不支持 async function，所以 Egg 1.x 仍然基于 Koa 1.x 开发，但是在此基础上，Egg 全面增加了 async function 的支持，再加上 Egg 对 Koa 2.x 的中间件也完全兼容，应用层代码可以完全基于 async function 来开发。
 
