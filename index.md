@@ -1,6 +1,5 @@
 # koa 与 express 与 connect 与 egg 区别
 
-**目前市场上**
 ##  express
 
 >  Express是一个简洁灵活的web开发框架，使用简单而功能强大
